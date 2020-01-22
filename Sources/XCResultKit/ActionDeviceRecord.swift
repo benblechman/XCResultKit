@@ -110,7 +110,7 @@ public struct ActionDeviceRecord: XCResultObject, Encodable {
         try container.encodeIfPresent(isWireless, forKey: .isWireless)
         try container.encodeIfPresent(cpuKind, forKey: .cpuKind)
         try container.encode(isConcreteDevice, forKey: .isConcreteDevice)
-        try container.encode(cpuCount, forKey: .cpuCount)
+        try container.encodeIfPresent(cpuCount, forKey: .cpuCount)
         try container.encodeIfPresent(cpuSpeedInMhz, forKey: .cpuSpeedInMhz)
         try container.encodeIfPresent(busSpeedInMhz, forKey: .busSpeedInMhz)
         try container.encodeIfPresent(ramSizeInMegabytes, forKey: .ramSizeInMegabytes)
